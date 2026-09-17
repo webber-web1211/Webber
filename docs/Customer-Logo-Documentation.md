@@ -23,6 +23,13 @@ The customer logo placeholders have been replaced with named customer assets in:
 | Battrixx | `public/logos/customers/battrixx.png` | Pulled from Battrixx's public site logo asset. |
 | JP Minda Group | `public/logos/customers/jp-minda.svg` | Pulled from JP Minda Group's public site logo asset. |
 | Cygni | `public/logos/customers/cygni.png` | Pulled from Cygni's public site logo asset. |
+| Neuron Energy | `public/logos/customers/neuron-energy.png` | From `Assets/Logos/Clients/neuron-energy.png`, flattened to white and re-encoded (465KB -> 10KB). |
+| Geon | `public/logos/customers/geon.png` | From `Assets/Logos/Clients/Geon.webp`, white-trimmed (the source carried ~25% padding, which the rail's area-normalization would have read as part of the logo) and converted to PNG. |
+
+> Note: the rows above this point are out of date — several list `.svg` files
+> that are now `.png`, and some customers (Livguard, Su-Kam, Battrixx, JP
+> Minda, Cygni) are no longer in `customerLogos`. `src/content/company.ts` is
+> the authority for what actually renders.
 
 ## Site Wiring
 

@@ -93,6 +93,8 @@ export const customerLogos = [
   { name: "Replus Green", logo: "/logos/customers/replus.png" },
   { name: "Trontek", logo: "/logos/customers/trontek.png" },
   { name: "Inverted", logo: "/logos/customers/inverted.png" },
+  { name: "Neuron Energy", logo: "/logos/customers/neuron-energy.png" },
+  { name: "Geon", logo: "/logos/customers/geon.png" },
 ] as const;
 
 export const timeline = [
