@@ -25,7 +25,7 @@ export function Recognition({
               delayMs={i * 50}
               className="card p-8"
             >
-              <p className="spec-value !text-grey-400">0{i + 1}</p>
+              <p className="spec-value !text-teal-600">0{i + 1}</p>
               <h3 className="type-h4 mt-4">{a.title}</h3>
               <p className="micro-label mt-3">{a.issuer}</p>
             </Reveal>

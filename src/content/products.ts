@@ -1,3 +1,14 @@
+export interface Accessory {
+  /** Display name, exactly as the product data gives it. */
+  name: string;
+  /**
+   * `/images/products/accessories/<file>.webp`. `SmartImage` renders a
+   * technical placeholder tile when the file isn't there yet, so names can be
+   * wired up before the renders exist.
+   */
+  image: string;
+}
+
 export interface Product {
   slug: string;
   name: string;
@@ -30,6 +41,24 @@ export interface Product {
   certification: string;
   // Overview
   positioning: string;
+  /**
+   * Accessories — **not a workbook field.** The "Products" sheet has no
+   * accessory column, so unlike everything above this is maintained by hand
+   * and must come from confirmed product data, never be inferred from a
+   * board's photography.
+   *
+   * Optional, and currently unset on every product: a product with no list
+   * renders no accessories control at all, so the card is unchanged until a
+   * list is filled in. The card lays the panel out 3-up, so three entries
+   * land as a single row:
+   *
+   *     accessories: [
+   *       { name: "…", image: "/images/products/accessories/….webp" },
+   *       { name: "…", image: "/images/products/accessories/….webp" },
+   *       { name: "…", image: "/images/products/accessories/….webp" },
+   *     ],
+   */
+  accessories?: Accessory[];
 }
 
 /**

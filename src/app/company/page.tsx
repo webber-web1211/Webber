@@ -57,7 +57,8 @@ export default function CompanyPage() {
             COMPANY / BUILT IN INDIA
           </TechnicalLabel>
           <h1 className="type-h1 max-w-[13ch]">
-            Engineering the control layer for global electrification.
+            Engineering the control layer{" "}
+            <span className="headline-accent">for global electrification.</span>
           </h1>
           <p className="type-lead mt-8">
             A 75+ person team building electronics and software for mobility,
@@ -116,7 +117,7 @@ export default function CompanyPage() {
             {timeline.map((t, i) => (
               <Reveal as="li" key={`${t.year}-${t.event}`} delayMs={i * 40}>
                 <div className="grid grid-cols-[64px_1fr] gap-6 border-t border-grey-200 py-6 md:grid-cols-[96px_280px_1fr]">
-                  <span className="spec-value !text-blue-700">{t.year}</span>
+                  <span className="spec-value !text-teal-700">{t.year}</span>
                   <h3 className="type-h4 !text-[1.1rem]">{t.event}</h3>
                   <p className="type-body col-span-2 !text-[1rem] md:col-span-1">
                     {t.detail}
@@ -147,7 +148,15 @@ export default function CompanyPage() {
         <BlueprintMeasure label="04 / THE WIDER TEAM" />
         <div className="wrap">
           <Reveal>
-            <SectionIntro label="THE WIDER TEAM" title="Documentary, not stock." />
+            <SectionIntro
+              label="THE WIDER TEAM"
+              titleClassName="max-w-[16ch]"
+              title={
+                <>
+                  Documentary, <span className="headline-accent">not stock.</span>
+                </>
+              }
+            />
           </Reveal>
           <ul className="gap-module mt-14 grid grid-cols-2 lg:grid-cols-3">
             {mosaic.map((m, i) => (

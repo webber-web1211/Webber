@@ -25,7 +25,7 @@ under each section.
 | Aesthetic Blue  | `#234F8F` | 35, 79, 143      | Primary brand blue — CTAs, links, accents |
 | Spindle         | `#B3CDEB` | 179, 205, 235    | Light blue tint — soft backgrounds, tags |
 | Anchor Gray     | `#54595F` | 84, 89, 96       | Secondary text / neutral gray            |
-| Teal            | `#008080` | 0, 128, 128      | Accent — hover state                     |
+| Teal            | `#008080` | 0, 128, 128      | Secondary accent — hover state, storage/BESS domain, measured results |
 | Full White      | `#FFFFFF` | 255, 255, 255    | Canvas / reversed text                   |
 | Gradient        | `#215090` → `#0F253F` | — | Decorative panel gradient (hero/CTA tiles) |
 
@@ -45,6 +45,37 @@ defined as the source-of-truth custom properties (`--uniform-blue`,
 `--blue-*` / `--grey-*` / `--ink*` / `--canvas*` scale used throughout every
 component is re-derived from those swatches with `color-mix()` so the whole
 site inherits the brand palette without touching each component file.
+
+### Teal as the secondary color
+
+**Project decision (2026-09-17), not extracted from the PDF.** The guideline
+names Teal only as the button hover accent; it is used more widely on the site
+as the brand's secondary color. To keep it a signal rather than decoration it
+follows one rule — **Aesthetic Blue is primary and structural; Teal means one
+of exactly two things:**
+
+1. **The storage / BESS domain.** The BESS catalogue filter and its voltage
+   sub-filters, the BESS chip on `ProductCard`, and the hero label on a BESS
+   product's detail page. Automotive stays blue, so the two application
+   families are told apart by color anywhere they sit side by side.
+2. **A measured result or a live event.** The "after balancing" bars and the
+   balancing-intervention markers in the technology charts, the pulse running
+   the architecture spine, the footer electron, and the end of the CTA trace
+   line — which terminates on a button whose own hover state is teal.
+
+Everything else stays blue. Adding teal outside those two meanings dilutes it.
+
+**Implementation:** `--teal-700` … `--teal-50` in `src/app/globals.css`
+`:root`, derived from `--teal` with `color-mix()` exactly the way the blue
+scale is derived from `--aesthetic-blue`. Exposed to Tailwind as
+`text-teal-700` / `bg-teal-50` / `border-teal-300` etc., plus the
+`.micro-label--teal` variant and `tone="teal"` on `TechnicalLabel`.
+
+**Contrast:** `#008080` is 4.8:1 on white — AA for normal text, but with no
+headroom at micro-label sizes, so `--teal-700` (6.1:1) is the step to use for
+text. On Uniform Blue, raw teal is only 3.2:1, so `.band-dark` /
+`.band-gradient` re-point the whole ramp lighter (~7:1) the same way they
+re-point the blues to Spindle.
 
 ## Typography
 

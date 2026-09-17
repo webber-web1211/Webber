@@ -19,7 +19,9 @@ export default function ContactPage() {
           <TechnicalLabel blue className="mb-6">
             CONTACT
           </TechnicalLabel>
-          <h1 className="type-h1 mx-auto max-w-[10ch]">Build with Webber.</h1>
+          <h1 className="type-h1 mx-auto max-w-[10ch]">
+            Build <span className="headline-accent">with Webber.</span>
+          </h1>
           <p className="type-lead mx-auto mt-8 max-w-[46ch]">
             Send a message and our engineering team will get back to you.
           </p>

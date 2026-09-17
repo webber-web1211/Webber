@@ -44,7 +44,14 @@ function matchesBess(product: Product, sub: BessSub): boolean {
   return numbersIn(product.nominalVoltage).some((n) => n >= min && n <= max);
 }
 
-/** Single-page BMS catalogue. Details are intentionally kept in the cards. */
+/**
+ * Single-page BMS catalogue. Details are intentionally kept in the cards.
+ *
+ * The two application families carry the two brand colours throughout: the
+ * Automotive filter and its chips are Aesthetic Blue, BESS is Teal — the same
+ * split `ProductCard` uses for its domain chip and the detail page uses for
+ * its hero label, so the filter teaches the colour before the grid uses it.
+ */
 export function ProductExplorer() {
   const [activeCategory, setActiveCategory] = useState<Category | null>(null);
   const [automotiveSub, setAutomotiveSub] = useState<AutomotiveSub>("all");
@@ -70,7 +77,7 @@ export function ProductExplorer() {
           type="button"
           aria-pressed={activeCategory === "automotive"}
           onClick={() => toggleCategory("automotive")}
-          className={`rounded-[4px] border px-5 py-3 text-base font-medium transition-colors ${activeCategory === "automotive" ? "border-blue-700 bg-blue-50 text-blue-700" : "border-grey-200 bg-white text-grey-600 hover:border-blue-300 hover:text-blue-700"}`}
+          className={`rounded-[4px] border px-5 py-3 text-base font-medium transition-colors ${activeCategory === "automotive" ? "border-blue-700 bg-blue-50 text-blue-700" : "border-grey-200 bg-white text-grey-700 hover:border-blue-300 hover:text-blue-700"}`}
         >
           Automotive
         </button>
@@ -78,7 +85,7 @@ export function ProductExplorer() {
           type="button"
           aria-pressed={activeCategory === "bess"}
           onClick={() => toggleCategory("bess")}
-          className={`rounded-[4px] border px-5 py-3 text-base font-medium transition-colors ${activeCategory === "bess" ? "border-blue-700 bg-blue-50 text-blue-700" : "border-grey-200 bg-white text-grey-600 hover:border-blue-300 hover:text-blue-700"}`}
+          className={`rounded-[4px] border px-5 py-3 text-base font-medium transition-colors ${activeCategory === "bess" ? "border-teal-600 bg-teal-50 text-teal-700" : "border-grey-200 bg-white text-grey-700 hover:border-teal-300 hover:text-teal-700"}`}
         >
           BESS
         </button>
@@ -111,7 +118,7 @@ export function ProductExplorer() {
 
       {activeCategory === "bess" && (
         <div className="mt-3 flex flex-wrap items-center gap-2 pl-1" aria-label="BESS sub-filters">
-          <span className="micro-label mr-1 text-grey-400">BESS</span>
+          <span className="micro-label micro-label--teal mr-1">BESS</span>
           {(
             [
               ["all", "All"],
@@ -126,7 +133,7 @@ export function ProductExplorer() {
               type="button"
               aria-pressed={bessSub === value}
               onClick={() => setBessSub(value)}
-              className={`rounded-full border px-3 py-1.5 text-[0.75rem] font-medium transition-colors ${bessSub === value ? "border-blue-700 bg-blue-50 text-blue-700" : "border-grey-200 bg-white text-grey-500 hover:border-blue-300 hover:text-blue-700"}`}
+              className={`rounded-full border px-3 py-1.5 text-[0.75rem] font-medium transition-colors ${bessSub === value ? "border-teal-600 bg-teal-50 text-teal-700" : "border-grey-200 bg-white text-grey-500 hover:border-teal-300 hover:text-teal-700"}`}
             >
               {label}
             </button>

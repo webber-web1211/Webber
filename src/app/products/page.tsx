@@ -23,7 +23,8 @@ export default function ProductsPage() {
             PRODUCT SYSTEMS / BMS + CONNECTIVITY
           </TechnicalLabel>
           <h1 className="type-h1 max-w-[14ch]">
-            One BMS stack. From two-wheelers to grid-scale storage.
+            One BMS stack.{" "}
+            <span className="headline-accent">From two-wheelers to grid-scale storage.</span>
           </h1>
           <p className="type-lead mt-8">
             12V to 1200V battery intelligence, designed and deployed in India.

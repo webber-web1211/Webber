@@ -62,7 +62,10 @@ export default async function ProductDetailPage({
           </nav>
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div>
-              <TechnicalLabel blue className="mb-4">
+              <TechnicalLabel
+                tone={product.application === "BESS" ? "teal" : "blue"}
+                className="mb-4"
+              >
                 {product.application} / {product.otherApplications}
               </TechnicalLabel>
               <h1 className="type-h2">{product.name}</h1>

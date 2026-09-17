@@ -68,7 +68,8 @@ export default function TechnologyPage() {
               FIRST-PRINCIPLE DESIGN
             </TechnicalLabel>
             <h1 className="type-h1 max-w-[12ch]">
-              Safety is a system, not a checklist.
+              Safety is a system,{" "}
+              <span className="headline-accent">not a checklist.</span>
             </h1>
             <p className="type-lead mt-8">
               Battery control architectures designed around real operating
@@ -86,7 +87,8 @@ export default function TechnologyPage() {
           <Reveal className="text-center">
             <TechnicalLabel className="mb-6">SYSTEM ARCHITECTURE</TechnicalLabel>
             <h2 className="type-h3 mx-auto max-w-[20ch]">
-              From cell measurement to fleet decision.
+              From cell measurement{" "}
+              <span className="headline-accent">to fleet decision.</span>
             </h2>
           </Reveal>
           <Reveal delayMs={100} className="mt-14">
@@ -145,7 +147,7 @@ export default function TechnologyPage() {
                 <>
                   Engineered for certification.
                   <br />
-                  Validated for deployment.
+                  <span className="headline-accent">Validated for deployment.</span>
                 </>
               }
             />
@@ -185,7 +187,7 @@ export default function TechnologyPage() {
                 <>
                   Designed at the bench.
                   <br />
-                  Proven in the field.
+                  <span className="headline-accent">Proven in the field.</span>
                 </>
               }
               lead="Every design passes through thermal, abuse, vibration and environmental testing, hardware-in-loop validation, production end-of-line testing, and 100K+ systems of field data feed back into the next revision."
@@ -220,7 +222,7 @@ export default function TechnologyPage() {
                 <>
                   Edge decisions in milliseconds.
                   <br />
-                  Fleet insight over millions of events.
+                  <span className="headline-accent">Fleet insight over millions of events.</span>
                 </>
               }
               lead="Firmware makes protection decisions at the edge. System health streams to the cloud, where fault detection and trend analysis run today, with predictive-maintenance models in development for BESS."

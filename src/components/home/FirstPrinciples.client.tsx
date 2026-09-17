@@ -92,15 +92,15 @@ function DiffPanel({
       <h3 className="type-h4 mt-4">{d.headline}</h3>
       <dl className="mt-6 space-y-4">
         <div>
-          <dt className="type-body font-bold">The problem</dt>
+          <dt className="type-body font-bold !text-teal-700">The problem</dt>
           <dd className="type-body mt-1">{d.problem}</dd>
         </div>
         <div>
-          <dt className="type-body font-bold">The approach</dt>
+          <dt className="type-body font-bold !text-teal-700">The approach</dt>
           <dd className="type-body mt-1">{d.approach}</dd>
         </div>
         <div>
-          <dt className="type-body font-bold">The system advantage</dt>
+          <dt className="type-body font-bold !text-teal-700">The system advantage</dt>
           <dd className="type-body mt-1">{d.advantage}</dd>
         </div>
       </dl>

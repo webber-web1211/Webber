@@ -27,7 +27,7 @@ export function ProofStrip() {
                   <CountUp value={m.value} suffix={m.suffix} />
                 )}
               </dd>
-              <dt className="micro-label mt-2">{m.label}</dt>
+              <dt className="micro-label micro-label--teal mt-2">{m.label}</dt>
             </div>
           ))}
         </dl>

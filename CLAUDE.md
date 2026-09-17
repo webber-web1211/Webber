@@ -52,9 +52,19 @@ checking that file first — it's the source of truth, not this summary.
 - All color lives in `src/app/globals.css` `:root` as six brand swatches
   (`--uniform-blue`, `--aesthetic-blue`, `--spindle`, `--anchor-gray`,
   `--teal`, plus button-only `--pressed-indigo` / `--btn-disabled-gray`).
-  Every other token (`--ink`, `--grey-*`, `--blue-*`, `--canvas-soft`, etc.) is
-  derived from those six via `color-mix()`. **Never hardcode a hex color in a
-  component** — add or reuse a token so brand changes cascade from one place.
+  Every other token (`--ink`, `--grey-*`, `--blue-*`, `--teal-*`,
+  `--canvas-soft`, etc.) is derived from those six via `color-mix()`.
+  **Never hardcode a hex color in a component** — add or reuse a token so
+  brand changes cascade from one place.
+- **Teal is the secondary color**, not only the button hover the guideline's
+  palette table describes. It has its own derived ramp (`--teal-700` …
+  `--teal-50`) and carries two meanings site-wide: the storage/**BESS**
+  domain (blue = Automotive) and a **measured result or live event** (chart
+  "after" series, architecture pulse, footer electron, the end of the CTA
+  trace). Read "Teal as the secondary color" in `BRAND_GUIDELINES.md` before
+  adding more of it — outside those two meanings it stops being a signal.
+  Use `--teal-700` for text; the dark bands re-point the ramp lighter because
+  raw `#008080` on Uniform Blue is only 3.2:1.
 - Primary heading font is **Space Grotesk** (`--font-display`), a free stand-in
   for Aguda Black — the brand's actual primary typeface, a paid Graviton font
   not available as a webfont. Body copy is **Roboto** (`--font-sans`). The

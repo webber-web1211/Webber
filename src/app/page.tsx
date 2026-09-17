@@ -37,7 +37,13 @@ export default function HomePage() {
             <Reveal>
               <SectionIntro
                 label="ONE STACK. MULTIPLE ENERGY SYSTEMS."
-                title="Modular battery intelligence, 12V to 1200V."
+                titleClassName="max-w-[16ch]"
+                title={
+                  <>
+                    Modular battery intelligence,{" "}
+                    <span className="headline-accent">12V to 1200V.</span>
+                  </>
+                }
                 lead="Modular battery intelligence for compact mobility, high-current platforms and stationary storage."
               />
             </Reveal>
@@ -76,7 +82,7 @@ export default function HomePage() {
                   <>
                     Not assembled from a checklist.
                     <br />
-                    Designed from first principles.
+                    <span className="headline-accent">Designed from first principles.</span>
                   </>
                 }
               />

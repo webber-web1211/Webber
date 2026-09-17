@@ -11,8 +11,10 @@ export function ChargingCurveChart() {
       <path d="M40 170 C 120 90, 200 70, 370 62" fill="none" stroke="var(--grey-400)" strokeWidth="1.5" strokeDasharray="5 4" />
       {/* cell-state curve with balancing interventions */}
       <path d="M40 170 C 110 85, 160 70, 210 58 L 225 60 C 270 48, 310 42, 370 36" fill="none" stroke="var(--blue-600)" strokeWidth="2" />
+      {/* balancing interventions: teal, the secondary accent, so the events on
+          the curve are distinguishable from the curve itself */}
       {[210, 225].map((x, i) => (
-        <circle key={i} cx={x} cy={i === 0 ? 58 : 60} r="3.5" fill="var(--canvas)" stroke="var(--blue-600)" strokeWidth="1.5" />
+        <circle key={i} cx={x} cy={i === 0 ? 58 : 60} r="4" fill="var(--canvas)" stroke="var(--teal-600)" strokeWidth="1.75" />
       ))}
       <text x="250" y="30" style={{ font: "500 10px var(--font-mono)", letterSpacing: "0.08em", fill: "var(--blue-700)" }}>
         CELL-STATE CONTROL
@@ -36,13 +38,13 @@ export function DispersionChart() {
         <rect key={`b${i}`} x={30 + i * 20} y={180 - h} width="12" height={h} fill="var(--grey-300)" />
       ))}
       {after.map((h, i) => (
-        <rect key={`a${i}`} x={230 + i * 20} y={180 - h} width="12" height={h} fill="var(--blue-500)" />
+        <rect key={`a${i}`} x={230 + i * 20} y={180 - h} width="12" height={h} fill="var(--teal-500)" />
       ))}
       <line x1="20" y1="180" x2="390" y2="180" stroke="var(--grey-300)" />
       <text x="30" y="205" style={{ font: "500 10px var(--font-mono)", letterSpacing: "0.08em", fill: "var(--grey-500)" }}>
         BEFORE
       </text>
-      <text x="230" y="205" style={{ font: "500 10px var(--font-mono)", letterSpacing: "0.08em", fill: "var(--blue-700)" }}>
+      <text x="230" y="205" style={{ font: "500 10px var(--font-mono)", letterSpacing: "0.08em", fill: "var(--teal-700)" }}>
         AFTER / 400 mA BALANCING
       </text>
     </svg>
@@ -107,7 +109,7 @@ export function ArchitectureFlow() {
               <span
                 className="arch-pulse absolute inset-x-[-1px] top-0 block h-3"
                 style={{
-                  background: "linear-gradient(to bottom, transparent, var(--blue-500))",
+                  background: "linear-gradient(to bottom, transparent, var(--teal-500))",
                   animationDelay: `${i * 0.28}s`,
                 }}
               />
